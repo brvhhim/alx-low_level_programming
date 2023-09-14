@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _isdigit(int c) - checks if the value is a digi
- * @c: character to be tested
- * Return: 1 if c is digit, 0 otherwise
+ * _isdigit - check the given value is a digit
+ * @c: values to check
+ *
+ * Return: 1 if digit else 0 (False)
+ *
  */
-
 int _isdigit(int c)
 {
 	if (c >= 0 && c <= 9)
@@ -14,3 +15,4 @@ int _isdigit(int c)
 	}
 	return (0);
 }
+
