@@ -9,9 +9,20 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char concat = *dest + *src;
+	int dest_len, src_len;
 
-	char *result = &concat + '\0';
+	dest_len = 0;
+	src_len = 0;
 
-	return (result);
+	while (*(dest + dest_len) != '\0')
+		dest_len++;
+
+	while (*(src + src_len) != '\0' && src_len < 97)
+	{
+		*(dest + dest_len) = *(src + src_len);
+		dest_len++;
+		src_len++;
+	}
+	*(dest + src_len) = '\0';
+	return (dest);
 }
